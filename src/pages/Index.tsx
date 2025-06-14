@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Editor from '@monaco-editor/react';
 import { Button } from '@/components/ui/button';
@@ -116,6 +115,66 @@ For any real number $x$, we have $e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$.
 E = mc^2
 \\end{equation}
 \\end{frame}
+
+\\end{document}`,
+
+    'Fancy Article': `\\documentclass[11pt]{article}
+\\usepackage{xcolor}
+\\usepackage{sectsty}
+\\usepackage{lmodern}
+\\usepackage{geometry}
+\\geometry{margin=1.25in}
+\\usepackage{titlesec}
+\\usepackage{amssymb,amsmath}
+\\usepackage{enumitem}
+\\definecolor{myblue}{RGB}{34,62,178}
+\\sectionfont{\\color{myblue}}
+\\subsectionfont{\\color{myblue!80!black}}
+\\titleformat{\\section}[block]{\\normalfont\\Large\\bfseries\\color{myblue}}{\\thesection}{1em}{}
+\\titleformat{\\subsection}[block]{\\normalfont\\large\\bfseries\\color{myblue!80!black}}{\\thesubsection}{1em}{}
+\\renewcommand{\\familydefault}{\\sfdefault}
+
+\\title{\\color{myblue} Fancy LaTeX Article}
+\\author{\\textsc{Your Name}}
+\\date{\\today}
+
+\\begin{document}
+\\maketitle
+
+\\begin{center}
+\\rule{0.8\\textwidth}{0.5pt}
+\\end{center}
+
+\\section*{Abstract}
+\\noindent
+This \\textbf{fancy} example shows how to style sections, text, and math with custom colors, fonts, and layout. Use this template to impress with elegant articles!
+
+\\section{Introduction}
+You can style your document with colors and other visual enhancements.
+
+\\subsection{Custom Colors}
+\\textcolor{myblue}{This text is blue!}
+
+\\subsection{Enumerated List}
+\\begin{enumerate}[label=\\textcolor{myblue}{\\textbf{\\arabic*.}}]
+  \\item Stylish
+  \\item Modern
+  \\item Easy to read
+\\end{enumerate}
+
+\\section{Beautiful Equations}
+\\begin{equation}
+\\boxed{
+  E = mc^2
+}
+\\end{equation}
+
+\\[
+\\sum_{n=1}^\\infty \\frac{1}{n^2} = \\frac{\\pi^2}{6}
+\\]
+
+\\section{Conclusion}
+Want more? Modify this template or try your own creativity!
 
 \\end{document}`
   };
