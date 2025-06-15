@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FeaturedSection from '@/components/FeaturedSection';
 import ExperimentsSection from '@/components/ExperimentsSection';
+import LatexSection from '@/components/LatexSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <FeaturedSection />
       <ExperimentsSection />
+      <LatexSection />
       <Footer />
     </div>
   );

@@ -17,7 +17,7 @@ const Navigation = () => {
             <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
             <a href="#discoveries" className="text-gray-700 hover:text-blue-600 transition-colors">Discoveries</a>
             <a href="#experiments" className="text-gray-700 hover:text-blue-600 transition-colors">Experiments</a>
-            <a href="#research" className="text-gray-700 hover:text-blue-600 transition-colors">Research</a>
+            <a href="#latex" className="text-gray-700 hover:text-blue-600 transition-colors">Physics LaTeX</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
           </div>
           
