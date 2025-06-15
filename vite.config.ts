@@ -10,9 +10,22 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     watch: {
-      usePolling: false,
-      interval: 100,
-      ignored: ['**/node_modules/**', '**/.git/**']
+      usePolling: true,
+      interval: 1000,
+      ignored: [
+        '**/node_modules/**',
+        '**/.git/**',
+        '**/dist/**',
+        '**/build/**',
+        '**/.next/**',
+        '**/coverage/**',
+        '**/.nyc_output/**',
+        '**/tmp/**',
+        '**/temp/**',
+        '**/*.log',
+        '**/.DS_Store',
+        '**/Thumbs.db'
+      ]
     }
   },
   plugins: [
