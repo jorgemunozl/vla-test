@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calculator, Square, SquareRoot, Code } from 'lucide-react';
+import { Calculator, Square, SquareRadical, Code } from 'lucide-react';
 
 const MathSection = () => {
   const mathTopics = [
@@ -16,7 +15,7 @@ const MathSection = () => {
     {
       title: "Linear Algebra",
       description: "Explore matrices, vectors, and transformations through hands-on practice",
-      icon: SquareRoot,
+      icon: SquareRadical,
       color: "text-green-500",
       difficulty: "Intermediate"
     },
