@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +5,10 @@ import { Microscope, BarChart3 } from 'lucide-react';
 
 const Hero = () => {
   const navigate = useNavigate();
+
+  const handleStartExploring = () => {
+    navigate('/latex-editor');
+  };
 
   const handleWatchGraph = () => {
     navigate('/notes');
@@ -27,7 +30,10 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 text-lg px-8 py-3">
+          <Button 
+            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 text-lg px-8 py-3"
+            onClick={handleStartExploring}
+          >
             Start Exploring
           </Button>
           <Button 
