@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Timeline } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const FeaturedSection = () => {
@@ -57,7 +57,7 @@ const FeaturedSection = () => {
               onClick={handleTimelineClick}
               className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-6 py-3 text-lg"
             >
-              <Timeline className="w-5 h-5 mr-2" />
+              <Clock className="w-5 h-5 mr-2" />
               View Timeline
             </Button>
           </div>
