@@ -40,7 +40,7 @@ const Notes = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-purple-600">
       <Navigation />
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -54,7 +54,7 @@ const Notes = () => {
             <BookOpen className="w-8 h-8 text-orange-500" />
             <h1 className="text-4xl font-bold text-white">Physics Notes Library</h1>
           </div>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
             Your curated collection of physics insights and discoveries. Explore your knowledge and visualize connections between concepts.
           </p>
           
@@ -81,7 +81,7 @@ const Notes = () => {
                 {notes.length}
               </span>
             </h2>
-            <p className="text-gray-400 mt-2">
+            <p className="text-gray-200 mt-2">
               {notes.length === 0 
                 ? "Your collection is empty." 
                 : `Your knowledge collection contains ${notes.length} note${notes.length !== 1 ? 's' : ''}.`
@@ -91,16 +91,16 @@ const Notes = () => {
           
           <div className="space-y-4">
             {notes.length === 0 ? (
-              <Card className="bg-gray-900 border-gray-800 border-dashed">
+              <Card className="bg-gray-900/50 border-gray-700 border-dashed backdrop-blur-sm">
                 <CardContent className="text-center py-16">
-                  <Lightbulb className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-500 mb-2">No Notes Available</h3>
-                  <p className="text-gray-600">Your physics notes library is empty.</p>
+                  <Lightbulb className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-400 mb-2">No Notes Available</h3>
+                  <p className="text-gray-500">Your physics notes library is empty.</p>
                 </CardContent>
               </Card>
             ) : (
               notes.map((note, index) => (
-                <Card key={note.id} className="bg-gray-900 border-gray-800 hover:border-orange-500/50 transition-all transform hover:scale-[1.02]">
+                <Card key={note.id} className="bg-gray-900/70 border-gray-700 hover:border-orange-500/50 transition-all transform hover:scale-[1.02] backdrop-blur-sm">
                   <CardHeader className="pb-2">
                     <div className="flex justify-between items-start">
                       <div className="flex items-center space-x-2">
@@ -121,13 +121,13 @@ const Notes = () => {
                         <Trash2 className="w-4 h-4" />
                       </Button>
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-400">
                       <Calendar className="w-4 h-4 mr-1" />
                       {note.date}
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300 whitespace-pre-wrap">{note.content}</p>
+                    <p className="text-gray-200 whitespace-pre-wrap">{note.content}</p>
                   </CardContent>
                 </Card>
               ))
