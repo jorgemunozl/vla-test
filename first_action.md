@@ -1,3 +1,5 @@
+Running inference for first time with pi0
+
 Step 00: action shape (1, 32), first values [-0.01903041 -0.799908    0.9569321  -0.05747298 -0.17689157]
 Step 01: action shape (1, 32), first values [-0.01991265 -0.7922587   0.9553315  -0.06625114 -0.16948645]
 Step 02: action shape (1, 32), first values [-0.02173385 -0.78834295  0.95648825 -0.07007705 -0.16327213]

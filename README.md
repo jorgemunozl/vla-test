@@ -11,7 +11,7 @@
      ```
 
 2. **Choose a LeRobot dataset**
-   - Use any dataset on the Hub that follows the LeRobot format (e.g. `lerobot/pusht`, `lerobot/aloha_sim`), or your own LeRobotDataset pushed to the Hub.
+   - 
 
 3. **Load dataset metadata**
    - Minimal example:
@@ -27,7 +27,7 @@
      ```python
      import torch
      from lerobot.configs.policies import PreTrainedConfig
-     from lerobot.policies.factory import make_policy, make_pre_post_processors
+     from lerobot.policies.factory import make_policy, make_pi0_pre_post_processors
      from lerobot.datasets.lerobot_dataset import LeRobotDatasetMetadata
 
      device = torch.device(
