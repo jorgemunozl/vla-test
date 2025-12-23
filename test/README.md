@@ -1,4 +1,6 @@
-### Roadmap: π₀ / π₀.₅ Inference from Datasets (No Robot)
+### Playing with π₀ / π₀.₅ models for a deep understanding. 
+
+We are going to make inference from Datasets (No Robot)
 
 
 1. **Install with π support**

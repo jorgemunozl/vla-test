@@ -5,20 +5,12 @@ without needing a real robot.
 It loads:
 - the NONHUMAN-RESEARCH/sarm_dataset_aloha_mobile_wash_pan dataset
 - the lerobot/pi0_base policy
-
 and runs offline inference on a few frames from the first episode.
-
 Usage (from the repo root, after installing lerobot with `[pi]` extras):
-
-    python play_pi.py
 """
 
-from __future__ import annotations
-
 from typing import Any, Dict
-
 import torch
-
 from lerobot.datasets.lerobot_dataset import LeRobotDataset, LeRobotDatasetMetadata
 from lerobot.policies.pi0.modeling_pi0 import PI0Policy
 from lerobot.policies.pi0.processor_pi0 import make_pi0_pre_post_processors
@@ -37,7 +29,8 @@ def select_device() -> torch.device:
     return torch.device("cpu")
 
 
-def build_batch_from_frame(frame: Dict[str, Any], task: str, index: int) -> Dict[str, Any]:
+def build_batch_from_frame(frame: Dict[str, Any],
+                           task: str, index: int) -> Dict[str, Any]:
     """
     Convert a single dataset frame into a batch dict expected by the
     PolicyProcessorPipeline.
@@ -61,6 +54,7 @@ def main() -> None:
     # 1) Load dataset metadata (features, stats, episodes info)
     print(f"Loading dataset metadata for: {REPO_ID}")
     ds_meta = LeRobotDatasetMetadata(REPO_ID)
+
     print(f"- Available feature keys: {list(ds_meta.features.keys())[:10]} ...")
 
     # Recall that Pi Zero waits observation.images.base_0_rgb
@@ -71,7 +65,7 @@ def main() -> None:
 
     # 2) Build π₀ config and policy (pretrained weights from the Hub)
     print(f"Loading π₀ policy from: {PI0_MODEL_ID}")
-    
+
     policy = PI0Policy.from_pretrained(PI0_MODEL_ID)
     policy.config.device = str(device)
     policy.to(device)
@@ -108,13 +102,13 @@ def main() -> None:
         with torch.no_grad():
             action = policy.select_action(policy_input)
             action = postproc(action)
-            
+
             policy_action = policy.select_action(policy_input)
             policy_action = postproc(policy_action)
 
         # `action` is a PolicyAction dict (e.g. {"action": tensor(...)}).
         # For a quick look, print shape and a small slice.
-    
+
         if isinstance(policy_action, torch.Tensor):
             action_np = policy_action.detach().cpu().numpy()
             print(
@@ -123,8 +117,6 @@ def main() -> None:
             )
         else:
             print(f"Step {i:02d}: action (non-tensor) = {policy_action}")
-
-
 
 
 if __name__ == "__main__":
