@@ -9,7 +9,6 @@ from PIL import Image
 
 device = "cuda"
 
-
 candidates = [
     "pick up the pillow",
     "adjust the blanket",
@@ -20,7 +19,6 @@ candidates = [
 
 policy = PI05Policy.from_pretrained("lerobot/pi05_base").to(device).eval()
 paligemma = policy.model.paligemma_with_expert.paligemma.to(device).eval()
-
 
 if hasattr(paligemma, "tie_weights"):
     paligemma.tie_weights()

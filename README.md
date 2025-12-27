@@ -2,27 +2,11 @@
 
 We are going to make inference from Datasets (No Robot)
 
-
-1. **Install with π support**
-   - From this repo root:
-     ```bash
-     python -m venv .venv
-     source .venv/bin/activate  # or .venv\Scripts\activate on Windows
-     pip install --upgrade pip
-     pip install -e ".[pi]"
-     ```
+Install LeRobot for Pi models are kind of problematic.
 
 2. **Choose a LeRobot dataset**
    - 
 
-3. **Load dataset metadata**
-   - Minimal example:
-     ```python
-     from lerobot.datasets.lerobot_dataset import LeRobotDatasetMetadata
-
-     ds_meta = LeRobotDatasetMetadata("lerobot/your_dataset_id")
-     print(ds_meta.features.keys())  # observation.* and action.* keys
-     ```
 
 4. **Instantiate a π policy and processors**
    - Example for π₀:
