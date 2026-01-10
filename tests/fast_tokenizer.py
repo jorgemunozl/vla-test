@@ -124,7 +124,6 @@ class FASTTokenizer:
     def extract_actions(self, tokens: torch.Tensor, action_horizon: int, action_dim: int) -> torch.Tensor:
         # Convert tokens to list for decoding
         tokens_list = tokens.detach().cpu().tolist() if isinstance(tokens, torch.Tensor) else tokens.tolist()
-        
         # Decode predicted output tokens
         decoded_tokens = self._fast_tokenizer.decode(tokens_list)
 
